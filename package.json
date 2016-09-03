@@ -1,0 +1,19 @@
+{
+  "name": "angular-pg",
+  "version": "0.0.1",
+  "description": "Angular Full stack playground",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "full-stack"
+  ],
+  "author": "Cristobal Garcia",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongodb": "^2.2.9"
+  }
+}
