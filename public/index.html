@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendor/angular-material/angular-material.min.css">
   </head>
-  <body ng-app='myApp' ng-cloak>
+  <body ng-app='myApp' ng-cloak layout='column'>
     <!-- My content begins -->
-    <p>Add your content here</p>
+    <md-toolbar>
+      Toolbar
+    </md-toolbar>
+    <div flex layout="row">
+      <md-sidenav flex="15" md-is-locked-open="true" class="md-whiteframe-z1">
+	<md-content>
+	  sidenav
+	</md-content>
+      </md-sidenav>
+      <div layput='column' flex>
+      </div>
+    </div>
     <!-- My content ends -->
 
     <script src="vendor/angular/angular.min.js"></script>

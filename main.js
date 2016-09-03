@@ -7,7 +7,6 @@ var app = express();
 
 
 function logreq(req, res, next){
-  1/0;
   let now = new Date();
   next();
   console.log(`${now}:${req.hostname}:${req.originalUrl}:${res.statusCode}`);
