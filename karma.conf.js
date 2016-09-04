@@ -15,17 +15,17 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'bower_components/angular/angular.js',
-      'bower_components/angular-mocks/angular-mocks.js',
-      'bower_components/angular-animate/angular-animate.js',
-      'bower_components/angular-aria/angular-aria.js',
-      'bower_components/angular-messages/angular-messages.js',
-      'bower_components/angular-material/angular-material.js',
-      'bower_components/angular-material/angular-material-mocks.js',
+      'vendor/angular/angular.js',
+      'vendor/angular-mocks/angular-mocks.js',
+      'vendor/angular-animate/angular-animate.js',
+      'vendor/angular-aria/angular-aria.js',
+      'vendor/angular-messages/angular-messages.js',
+      'vendor/angular-material/angular-material.js',
+      'vendor/angular-material/angular-material-mocks.js',
+      'other/ui-router-0.3.1/angular-ui-router.js',
       'public/js/**.js',
       'test/**/*Spec.js'
     ],
-
 
     // list of files to exclude
     exclude: [

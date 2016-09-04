@@ -16,8 +16,7 @@
         'controller': 'newQuoteCtrl as newQ'
       })
     }])
-    .controller('listQuotesCtrl', ['text', function(text){
-      this.text = text;
+    .controller('listQuotesCtrl', [function(){
       console.log('listQuotesCtrl started');
     }])
     .controller('newQuoteCtrl', [function(){
@@ -27,7 +26,6 @@
       var listQuotes = function(){
         return $q(function(resolve, reject){reject('to be implemented');});
       };
-
       return {
         listQuotes: listQuotes
       }
