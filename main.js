@@ -16,6 +16,8 @@ app.use(logreq);
 app.use(express.static('public'));
 app.use('/vendor', express.static('bower_components'));
 
+app.use('/other', express.static('otherlibs'));
+
 var apiv1 = express();
 apiv1.get('/status', function(req,res){
   res.status(200).json({status: 'ok', time: new Date()})
