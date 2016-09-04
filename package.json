@@ -15,5 +15,16 @@
   "dependencies": {
     "express": "^4.14.0",
     "mongodb": "^2.2.9"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-karma": "^2.0.0",
+    "grunt-protractor-runner": "^3.2.0",
+    "jasmine": "^2.5.0",
+    "jasmine-spec-reporter": "^2.7.0",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2",
+    "protractor": "^4.0.4"
   }
 }
