@@ -7,16 +7,25 @@
   </head>
   <body ng-app='myApp' ng-cloak layout='column'>
     <!-- My content begins -->
-    <md-toolbar>
-      Toolbar
-    </md-toolbar>
     <div flex layout="row">
-      <md-sidenav flex="15" md-is-locked-open="true" class="md-whiteframe-z1">
-	<md-content>
-	  sidenav
-	</md-content>
+      <md-sidenav flex="15"
+		  md-is-locked-open="true"
+		  md-disable-backdrop
+		  md-whiteframe='12'>
+	<md-toolbar class="md-theme-indigo">
+	  <h1 class="md-toolbar-tools">&micro;Quotetool</h1>
+	</md-toolbar>
+	<md-list ng-cloak>
+	  <md-list-item>
+	    <a ui-sref='list-quotes' ui-sref-active='active'>List quotes</a>
+	  </md-list-item>
+	  <md-list-item>
+	    <a ui-sref='new-quote' ui-sref-active='active'>New quote</a>
+	  </md-list-item>
+	</md-list>
       </md-sidenav>
-      <div layput='column' flex>
+      <div layout='column' flex>
+	<ui-view></ui-view>
       </div>
     </div>
     <!-- My content ends -->
