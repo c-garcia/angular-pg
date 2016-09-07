@@ -17,6 +17,7 @@
     "mongodb": "^2.2.9"
   },
   "devDependencies": {
+    "cucumber": "^1.2.2",
     "grunt": "^1.0.1",
     "grunt-karma": "^2.0.0",
     "grunt-protractor-runner": "^3.2.0",
@@ -25,6 +26,7 @@
     "karma": "^1.2.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.0.2",
-    "protractor": "^4.0.4"
+    "protractor": "^4.0.4",
+    "protractor-cucumber-framework": "^0.6.0"
   }
 }
