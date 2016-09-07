@@ -12,15 +12,24 @@
       $stateProvider.state({
         'name': 'new-quote',
         'url': '/new-quote',
-        'template': '<h1>new quote</h1>',
+        'templateUrl': 'js/actions/newQuote.tpl.html',
         'controller': 'newQuoteCtrl as newQ'
       })
     }])
     .controller('listQuotesCtrl', [function(){
       console.log('listQuotesCtrl started');
     }])
-    .controller('newQuoteCtrl', [function(){
+    .controller('newQuoteCtrl', ['$window', '$timeout',  function($window, $timeout){
+      this.message = function(msg){
+        $window.alert(msg);
+      };
+      this.show = false;
+      var vm = this;
       console.log('newQuoteCtrl started');
+      $timeout(function(){
+        vm.show = true;
+        console.log('made it visible');
+      },2000);
     }])
     .factory('quoteService', ['$q', function($q){
       var listQuotes = function(){
@@ -29,5 +38,9 @@
       return {
         listQuotes: listQuotes
       }
+    }])
+    .run(['$state', function($state){
+      $state.transitionTo('list-quotes');
+      console.log('initial state set');
     }]);
 })(angular);
