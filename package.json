@@ -24,12 +24,14 @@
     "grunt": "^1.0.1",
     "grunt-karma": "^2.0.0",
     "grunt-protractor-runner": "^3.2.0",
-    "jasmine": "^2.5.0",
-    "jasmine-spec-reporter": "^2.7.0",
     "karma": "^1.2.0",
+    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.0.0",
-    "karma-jasmine": "^1.0.2",
+    "karma-mocha": "^1.1.1",
+    "karma-sinon": "^1.0.5",
+    "mocha": "^3.0.2",
     "protractor": "^4.0.4",
-    "protractor-cucumber-framework": "^0.6.0"
+    "protractor-cucumber-framework": "^0.6.0",
+    "sinon": "^1.17.5"
   }
 }
