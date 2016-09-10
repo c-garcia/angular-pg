@@ -16,7 +16,7 @@ module.exports = function(){
 
   this.Then(/^an alert is shown$/, function () {
     var EC = protractor.ExpectedConditions;
-    var msg =  browser.driver.wait(EC.alertIsPresent(), 3000);
+    var msg =  browser.wait(EC.alertIsPresent(), 3000);
     return expect(browser.switchTo().alert().getText()).to.eventually.equal('hola');
   })
 }
