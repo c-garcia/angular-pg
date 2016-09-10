@@ -1,0 +1,21 @@
+<md-toolbar class="md-theme-indigo">
+  <h1 class="md-toolbar-tools">&micro;Quotetool: {{top.getTitle()}}</h1>
+</md-toolbar>
+<div flex layout="row">
+  <md-sidenav flex="15"
+	      md-is-locked-open="true"
+	      md-disable-backdrop
+	      md-whiteframe='1'>
+    <md-list ng-cloak>
+      <md-list-item>
+	<a ui-sref='root.list-quotes' ui-sref-active='active'>List quotes</a>
+      </md-list-item>
+      <md-list-item>
+	<a ui-sref='root.new-quote' ui-sref-active='active'>New quote</a>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
+  <div layout='column' flex>
+    <ui-view></ui-view>
+  </div>
+</div>
