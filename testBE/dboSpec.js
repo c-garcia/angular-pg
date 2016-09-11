@@ -70,7 +70,7 @@ describe('QuoteDBO', function(){
         });
       });
       describe('when adding a quote with an existing name', function(){
-        it('it throws a "non-unique name" exception', function(){
+        it('it rejects with "non-unique name" error', function(){
           return expect(sut.addQuote(fixtures.quoteList[0].name, 'non-existing customer'))
             .to
             .be.rejectedWith("non-unique name");
