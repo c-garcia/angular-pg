@@ -1,0 +1,9 @@
+{
+    "development":{
+	"driver": "mongodb",
+	"host": {"ENV": "ANGPG_DB_HOST"},
+	"port": {"ENV": "ANGPG_DB_PORT"},
+	"database": {"ENV": "ANGPG_DB_DB"}
+    }
+}
+    

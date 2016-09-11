@@ -15,8 +15,19 @@ function optsToURL(opts){
 
 exports = module.exports = {
   quoteList: quoteList,
-  setUpDB: function(opts, callback){
-    MongoClient.connect(optsToURL(opts), (err, db) => {
+
+  migrateDB: function(configPath, envName){
+    const DBMigrate = require('db-migrate');
+    let migrator = DBMigrate.getInstance(true, {
+      config: configPath,
+      env: envName,
+      'logLevel': 'error'
+    });
+    return migrator.up();
+  },
+  
+  setUpDB: function(dbOpts, callback){
+    MongoClient.connect(optsToURL(dbOpts), (err, db) => {
       db.collection('quotes').deleteMany({})
         .then(() => (db.collection('quotes').insertMany(quoteList)))
         .then(() => (db.close()))
@@ -31,8 +42,3 @@ exports = module.exports = {
     })
   }
 }
-    
-            
-    
-            
-  

@@ -7,21 +7,29 @@ const expect = chai.expect;
 const fixtures = require('./fixturesSupport');
 
 const QuoteDBO = require('../lib/quotedbo');
+var migrateOpts;
 var mongoOpts;
 var sut;
 
 describe('QuoteDBO', function(){
-  before(function(){
+  before(function(done){
     const dotenv = require('dotenv');
     dotenv.config();
+
+    migrateOpts = {
+      config: process.env['ANGPG_MIGR_CONF'],
+      env: process.env['ANGPG_MIGR_ENV']
+    };
 
     mongoOpts = {
       host: process.env['ANGPG_DB_HOST'],
       port: process.env['ANGPG_DB_PORT'],
       db: process.env['ANGPG_DB_DB']
-    }
+    };
 
     sut = new QuoteDBO(mongoOpts);
+
+    fixtures.migrateDB(migrateOpts.config, migrateOpts.env).then(done);
   });
   describe('when there are persisted quotes', function(){
     beforeEach(function(done){
